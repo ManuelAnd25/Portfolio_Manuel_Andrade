@@ -1,13 +1,26 @@
+@font-face {
+    font-family: 'Bezaen';
+    src: url('../fonts/Bezaen.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Quacker';
+    src: url('../fonts/Bellerose.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Bellerose', sans-serif;
 }
 
 body {
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -15,14 +28,15 @@ header {
     color: white;
     text-align: center;
     padding: 40px 20px;
-    position: relative;
 }
 
-.header-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid white;
+h1.nombre {
+    font-family: 'Bezaen', sans-serif;
+    font-size: 6em;
+}
+
+header h2 {
+    font-size: 2em;
 }
 
 nav {
@@ -38,6 +52,10 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+main {
+    flex: 1;
 }
 
 #Conoceme {
@@ -67,12 +85,26 @@ nav a:hover {
     margin-top: 20px;
 }
 
+.iconos-skills, .soft-skills {
+    width: 400px;
+    max-width: 100%;
+}
+
 .iconos-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     gap: 10px;
-    max-width: 500px;
+    justify-content: center;
+}
+
+.soft-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #000;
 }
 
 .iconos-skills img {
@@ -86,17 +118,6 @@ nav a:hover {
     transform: scale(1.2);
 }
 
-.soft-skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background: #f1f1f1;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
-}
-
 .soft-skills h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
@@ -104,6 +125,7 @@ nav a:hover {
 
 .soft-skills ul {
     list-style: none;
+    padding: 0;
 }
 
 .soft-skills li {
@@ -134,8 +156,6 @@ nav a:hover {
 .proyecto {
     width: 48%;
     height: 900px;
-    background: #007bff;
-    color: white;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -144,10 +164,38 @@ nav a:hover {
     border-radius: 15px;
     text-align: center;
     transition: 0.3s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-.proyecto:hover {
-    background: #ff4b2b;
+.proyecto-web {
+    background-image: url('../img/web_projecto.jpg');
+    color: black;
+}
+
+.proyecto-3d {
+    background-image: url('../img/3d_projecto.jpg');
+    color: white;
+}
+
+.proyecto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.proyecto:hover::before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.proyecto span {
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -159,18 +207,15 @@ nav a:hover {
     .proyecto {
         width: 90%;
         height: 150px;
-    }
-
-    .contenedor-habilidades {
-        flex-direction: column;
-        align-items: center;
+        font-size: 1.2em;
     }
 }
 
 #contacto {
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
     background: white;
+    margin-top: auto;
 }
 
 #contacto h2 {
@@ -182,7 +227,6 @@ nav a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 10px;
 }
 
 .contacto-iconos a {
@@ -201,5 +245,4 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
 }
