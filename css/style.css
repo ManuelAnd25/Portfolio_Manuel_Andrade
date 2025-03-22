@@ -19,7 +19,8 @@ body {
 }
 
 header {
-    background: url('../img/header.gif') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('../img/header.gif') center/cover no-repeat;
     text-align: center;
     padding: 50px 20px;
 }
@@ -244,6 +245,26 @@ main {
 
 .contacto-iconos a:hover {
     transform: scale(1.2);
+}
+
+.contact-btn {
+    display: inline-block;
+    text-align: center;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.274);
+    padding: 0.5em 1em;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-top: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.contact-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
 }
 
 footer {
