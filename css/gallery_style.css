@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Bezaen';
+    src: url('../fonts/Bezaen.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bellerose', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #2a2d32; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    background: url('../img/header.gif') center/cover no-repeat;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1.nombre {
+    font-family: 'Bezaen', sans-serif;
+    font-size: 6.5em;
+}
+
+header h2 {
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+#proyectos {
+    background: #3a3d42;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#proyectos h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+    overflow-x: auto; 
+    padding: 10px;
+}
+
+.gallery a {
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+    max-width: 200px;
+}
+
+.gallery img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid rgb(0, 215, 4);
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery p {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+footer {
+    font-size: 30px;
+    background: #222;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
