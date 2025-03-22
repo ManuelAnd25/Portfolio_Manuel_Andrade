@@ -12,11 +12,10 @@
 }
 
 body {
-    background-color: #2a2d32; 
+    background-color: #2a2d32;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    text-align: center;
 }
 
 header {
@@ -50,54 +49,36 @@ nav a:hover {
 
 main {
     flex: 1;
-    padding: 20px;
-}
-
-#proyectos {
-    background: #3a3d42;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-#proyectos h2 {
-    font-size: 3em;
-    margin-bottom: 40px;
 }
 
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: nowrap;
-    overflow-x: auto; 
+    overflow-x: auto;
     padding: 10px;
 }
 
 .gallery a {
     text-decoration: none;
+    color: white;
     text-align: center;
-    flex: 1;
-    max-width: 200px;
+    flex: 1 1 280px;
+    max-width: 300px;
 }
 
 .gallery img {
-    width: 180px;
-    height: 120px;
+    width: 300px;
+    height: 550px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
-    border: 2px solid rgb(0, 215, 4);
-    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+    border: 3px solid rgb(0, 215, 4);
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
-}
-
-.gallery p {
-    margin-top: 5px;
-    font-weight: bold;
-    font-size: 14px;
+    transform: scale(1.1);
 }
 
 footer {
@@ -105,5 +86,4 @@ footer {
     background: #222;
     text-align: center;
     padding: 20px;
-    margin-top: auto;
 }
